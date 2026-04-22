@@ -5,3 +5,20 @@
   font-family: "DM Sans", sans-serif;
   /* box-sizing: border-box; */
 }
+
+.ellipsis {
+  display: -webkit-box;
+  /* Uses the flexbox model */
+  -webkit-box-orient: vertical;
+  /* Specifies the orientation */
+  -webkit-line-clamp: 4;
+  /* Limits to 3 lines */
+  overflow: hidden;
+  /* Hides overflow text */
+  text-overflow: ellipsis;
+  /* Adds the ellipsis */
+  max-height: 6em;
+  /* Adjusts based on line height */
+  line-height: 1.5em;
+  /* Sets line height */
+}
