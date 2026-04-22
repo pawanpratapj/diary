@@ -1,8 +1,8 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
 
 * {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
   /* box-sizing: border-box; */
 }
 
@@ -21,4 +21,14 @@
   /* Adjusts based on line height */
   line-height: 1.5em;
   /* Sets line height */
+}
+
+.homeMDropDown {
+  transition: max-height 0.2s ease-out;
+  /* Transition effect */
+}
+
+.hideDropDown {
+  border: none;
+  max-height: 0px;
 }
