@@ -60,7 +60,7 @@ const Calender = (props) => {
   }, []);
 
   return <>
-    <div className='py-2 px-5 bg-slate-900 border-b border-t border-slate-700'>
+    <div className='py-2 px-5 bg-slate-900 border-b border-t border-slate-800'>
       <div className='flex items-center pb-2 mb-1 pt-1 relative' onClick={handleMonthDropdown}>
         <h1 className='font-bold text-2xl mr-2'>April, 2026</h1>
         <DownArrow />
@@ -70,7 +70,7 @@ const Calender = (props) => {
       </div>
       <div className='grid grid-cols-7 gap-2 text-center text-sm'>
         {['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'].map((elem, index) => <div key={index} className='uppercase text-slate-500 text-[12px]'>{elem}</div>)}
-        {Array.from({ length: 35 }, (elem, index) => <p key={index} className='aspect-square w-full  grid place-items-center border-purple-400 rounded-xl' ke={index} style={index - firstDayofMonth == today.getDate() ? { background: '#3F15EA', color: 'white' } : {}}>{index > firstDayofMonth ? (i <= lastDay ? i++ : <span className='text-slate-700'>{index - (lastDay + firstDayofMonth)}</span>) : <span className='text-slate-700'>{lastDayOfLastMonth + index - firstDayofMonth - 1}</span>}</p>)}
+        {Array.from({ length: 35 }, (elem, index) => <p key={index} className='aspect-square w-full  grid place-items-center border-purple-400 rounded-xl' ke={index} style={index - firstDayofMonth == today.getDate() ? { background: '#2b3963' } : {}}>{index > firstDayofMonth ? (i <= lastDay ? i++ : <span className='text-slate-700'>{index - (lastDay + firstDayofMonth)}</span>) : <span className='text-slate-700'>{lastDayOfLastMonth + index - firstDayofMonth - 1}</span>}</p>)}
       </div>
     </div>
   </>
@@ -110,7 +110,7 @@ const TodayNote = ({ heading, body }) => {
 
   useEffect(() => setRandomColor(getRc()), []);
 
-  return (<div className={`py-3 px-4 mt-3 rounded-3xl border-slate-600 bg-slate-800 border`} >
+  return (<div className={`py-3 px-4 mt-3 rounded-3xl border-slate-600 text-blue-200 bg-slate-800 border`} >
     <h3 className={`font-medium text-xl mb-1`}>{heading}</h3>
     <p className={`ellipsis text-sm`}>{body}</p>
   </div>);

@@ -4,7 +4,7 @@ import TodayDate from '../components/TodayDate'
 import LeftArrow from '../assets/LeftArrow'
 import { Link } from 'react-router'
 
-export const CreateNote = () => {
+const EditNote = () => {
   return (
     <div className='w-full h-screen px-5 py-3 bg-slate-950 flex flex-col'>
       <div className='flex items-center justify-between mb-5'>
@@ -18,9 +18,8 @@ export const CreateNote = () => {
         <p> <TodayDate /></p>
       </div>
       <textarea placeholder='How ware your day...' className='w-full outline-0 flex-1 mt-2 text-slate-100'></textarea>
-      {/* <button className='bg-slate-800  mt-2 rounded-xl text-white py-2'>Save Note</button> */}
     </div>
   )
 }
 
-export default CreateNote
+export default EditNote
